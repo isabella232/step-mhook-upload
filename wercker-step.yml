@@ -13,6 +13,12 @@ properties:
     source:
       type: string
       required: true
+    key-id:
+      type: string
+      required: true
+    key-secret:
+      type: string
+      required: true
     prefix:
       type: string
       required: false
