@@ -1,5 +1,5 @@
 name: mhook-upload
-version: 0.1.3
+version: 0.1.4
 description: Upload files using mhook
 keywords:
   - mhook
@@ -20,9 +20,6 @@ properties:
       type: string
       required: true
     prefix:
-      type: string
-      required: false
-    upload-prefix:
       type: string
       required: false
     use-latest:
