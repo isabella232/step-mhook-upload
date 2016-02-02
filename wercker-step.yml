@@ -1,0 +1,24 @@
+name: mhook-upload
+version: 0.1.0
+description: Upload files using mhook
+keywords:
+  - mhook
+  - upload
+  - s3
+  - MUFL
+properties:
+    bucket:
+      type: string
+      required: true
+    source:
+      type: string
+      required: true
+    prefix:
+      type: string
+      required: false
+    upload-prefix:
+      type: string
+      required: false
+    use-latest:
+      type: string
+      required: false
