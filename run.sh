@@ -20,6 +20,10 @@ if [ -z "$WERCKER_MHOOK_UPLOAD_KEY_SECRET" ]; then
     fail 'missing or empty option key_secret, please check wercker.yml'
 fi
 
+if [ -z "$WERCKER_MHOOK_UPLOAD_SOURCE" ]; then
+    fail 'missing or empty option source, please check wercker.yml'
+fi
+
 export AWS_ACCESS_KEY_ID=$WERCKER_MHOOK_UPLOAD_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$WERCKER_MHOOK_UPLOAD_KEY_SECRET
 
