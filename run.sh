@@ -5,7 +5,7 @@ if [ -n "$WERCKER_MHOOK_UPLOAD_USE_LATEST" ]; then
     UPLOAD_LATEST_FLAG="--latest"
 fi
 
-curl -o mhook https://s3.amazonaws.com/wercker-development/mhook/master/latest/linux_amd64/build
+curl -o mhook https://s3.amazonaws.com/wercker-development/mhook/master/latest/linux_amd64/mhook
 chmod +x mhook
 
 if [ -z "$WERCKER_MHOOK_UPLOAD_BUCKET" ]; then
@@ -26,8 +26,6 @@ fi
 
 export AWS_ACCESS_KEY_ID=$WERCKER_MHOOK_UPLOAD_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$WERCKER_MHOOK_UPLOAD_KEY_SECRET
-
-set -x
 
 ./mhook upload --bucket $WERCKER_MHOOK_UPLOAD_BUCKET \
     --project $WERCKER_GIT_REPOSITORY \
