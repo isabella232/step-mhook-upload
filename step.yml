@@ -1,0 +1,27 @@
+name: mhook-upload
+version: 1.0.0
+summary: Upload files using mhook
+tags:
+  - mhook
+  - upload
+  - s3
+  - MUFL
+properties:
+- name: bucket
+  type: string
+  required: true
+- name: source
+  type: string
+  required: true
+- name: key-id
+  type: string
+  required: true
+- name: key-secret
+  type: string
+  required: true
+- name: prefix
+  type: string
+  required: false
+- name: use-latest
+  type: string
+  required: false
